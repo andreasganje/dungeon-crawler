@@ -1,4 +1,4 @@
-# dungeon_crawler
+# Dungeon crawler
 
 A dungeon crawler script written in PHP. Provides rendering of dungeon graphics and auto mapping.
 
