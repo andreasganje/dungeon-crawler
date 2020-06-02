@@ -79,110 +79,110 @@ $labelRight2 = '&#9654;';
 
 // moving directions - create link for each direction, if possible
 if ($d == 'n') {
-    $l = '<a href="crawl.php?x=' . $x . '&y=' . $y . '&d=w" style="text-decoration: none;">' . $labelLeft . '</a>';
-    $r = '<a href="crawl.php?x=' . $x . '&y=' . $y . '&d=e" style="text-decoration: none;">' . $labelRight . '</a>';
+    $l = '<a href="index.php?x=' . $x . '&y=' . $y . '&d=w" style="text-decoration: none;">' . $labelLeft . '</a>';
+    $r = '<a href="index.php?x=' . $x . '&y=' . $y . '&d=e" style="text-decoration: none;">' . $labelRight . '</a>';
 
     if (@$level[$yToCheck - 1][$xToCheck] == 'p') {
-        $f = '<a href="crawl.php?x=' . $x . '&y=' . ($y - 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelFront . '</a>';
+        $f = '<a href="index.php?x=' . $x . '&y=' . ($y - 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelFront . '</a>';
     } else {
         $f = $labelFront;
     }
 
     if (@$level[$yToCheck][$xToCheck + 1] == 'p') {
-        $rr = '<a href="crawl.php?x=' . ($x + 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelRight2 . '</a>';
+        $rr = '<a href="index.php?x=' . ($x + 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelRight2 . '</a>';
     } else {
         $rr = $labelRight2;
     }
 
     if (@$level[$yToCheck][$xToCheck - 1] == 'p') {
-        $ll = '<a href="crawl.php?x=' . ($x - 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelLeft2 . '</a>';
+        $ll = '<a href="index.php?x=' . ($x - 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelLeft2 . '</a>';
     } else {
         $ll = $labelLeft2;
     }
 
     if (@$level[$yToCheck + 1][$xToCheck] == 'p') {
-        $b = '<a href="crawl.php?x=' . $x . '&y=' . ($y + 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelBack . '</a>';
+        $b = '<a href="index.php?x=' . $x . '&y=' . ($y + 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelBack . '</a>';
     } else {
         $b = $labelBack;
     }
 } elseif ($d == 'e') {
-    $l = '<a href="crawl.php?x=' . $x . '&y=' . $y . '&d=n" style="text-decoration: none;">' . $labelLeft . '</a>';
-    $r = '<a href="crawl.php?x=' . $x . '&y=' . $y . '&d=s" style="text-decoration: none;">' . $labelRight . '</a>';
+    $l = '<a href="index.php?x=' . $x . '&y=' . $y . '&d=n" style="text-decoration: none;">' . $labelLeft . '</a>';
+    $r = '<a href="index.php?x=' . $x . '&y=' . $y . '&d=s" style="text-decoration: none;">' . $labelRight . '</a>';
 
     if (@$level[$yToCheck][$xToCheck + 1] == 'p') {
-        $f = '<a href="crawl.php?x=' . ($x + 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelFront . '</a>';
+        $f = '<a href="index.php?x=' . ($x + 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelFront . '</a>';
     } else {
         $f = $labelFront;
     }
 
     if (@$level[$yToCheck + 1][$xToCheck] == 'p') {
-        $rr = '<a href="crawl.php?x=' . $x . '&y=' . ($y + 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelRight2 . '</a>';
+        $rr = '<a href="index.php?x=' . $x . '&y=' . ($y + 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelRight2 . '</a>';
     } else {
         $rr = $labelRight2;
     }
 
     if (@$level[$yToCheck - 1][$xToCheck] == 'p') {
-        $ll = '<a href="crawl.php?x=' . $x . '&y=' . ($y - 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelLeft2 . '</a>';
+        $ll = '<a href="index.php?x=' . $x . '&y=' . ($y - 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelLeft2 . '</a>';
     } else {
         $ll = $labelLeft2;
     }
 
     if (@$level[$yToCheck][$xToCheck - 1] == 'p') {
-        $b = '<a href="crawl.php?x=' . ($x - 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelBack . '</a>';
+        $b = '<a href="index.php?x=' . ($x - 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelBack . '</a>';
     } else {
         $b = $labelBack;
     }
 } elseif ($d == 's') {
-    $l = '<a href="crawl.php?x=' . $x . '&y=' . $y . '&d=e" style="text-decoration: none;">' . $labelLeft . '</a>';
-    $r = '<a href="crawl.php?x=' . $x . '&y=' . $y . '&d=w" style="text-decoration: none;">' . $labelRight . '</a>';
+    $l = '<a href="index.php?x=' . $x . '&y=' . $y . '&d=e" style="text-decoration: none;">' . $labelLeft . '</a>';
+    $r = '<a href="index.php?x=' . $x . '&y=' . $y . '&d=w" style="text-decoration: none;">' . $labelRight . '</a>';
 
     if (@$level[$yToCheck + 1][$xToCheck] == 'p') {
-        $f = '<a href="crawl.php?x=' . $x . '&y=' . ($y + 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelFront . '</a>';
+        $f = '<a href="index.php?x=' . $x . '&y=' . ($y + 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelFront . '</a>';
     } else {
         $f = $labelFront;
     }
 
     if (@$level[$yToCheck][$xToCheck - 1] == 'p') {
-        $rr = '<a href="crawl.php?x=' . ($x - 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelRight2 . '</a>';
+        $rr = '<a href="index.php?x=' . ($x - 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelRight2 . '</a>';
     } else {
         $rr = $labelRight2;
     }
 
     if (@$level[$yToCheck][$xToCheck + 1] == 'p') {
-        $ll = '<a href="crawl.php?x=' . ($x + 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelLeft2 . '</a>';
+        $ll = '<a href="index.php?x=' . ($x + 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelLeft2 . '</a>';
     } else {
         $ll = $labelLeft2;
     }
 
     if (@$level[$yToCheck - 1][$xToCheck] == 'p') {
-        $b = '<a href="crawl.php?x=' . $x . '&y=' . ($y - 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelBack . '</a>';
+        $b = '<a href="index.php?x=' . $x . '&y=' . ($y - 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelBack . '</a>';
     } else {
         $b = $labelBack;
     }
 } elseif ($d == 'w') {
-    $l = '<a href="crawl.php?x=' . $x . '&y=' . $y . '&d=s" style="text-decoration: none;">' . $labelLeft . '</a>';
-    $r = '<a href="crawl.php?x=' . $x . '&y=' . $y . '&d=n" style="text-decoration: none;">' . $labelRight . '</a>';
+    $l = '<a href="index.php?x=' . $x . '&y=' . $y . '&d=s" style="text-decoration: none;">' . $labelLeft . '</a>';
+    $r = '<a href="index.php?x=' . $x . '&y=' . $y . '&d=n" style="text-decoration: none;">' . $labelRight . '</a>';
 
     if (@$level[$yToCheck][$xToCheck - 1] == 'p') {
-        $f = '<a href="crawl.php?x=' . ($x - 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelFront . '</a>';
+        $f = '<a href="index.php?x=' . ($x - 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelFront . '</a>';
     } else {
         $f = $labelFront;
     }
 
     if (@$level[$yToCheck - 1][$xToCheck] == 'p') {
-        $rr = '<a href="crawl.php?x=' . $x . '&y=' . ($y - 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelRight2 . '</a>';
+        $rr = '<a href="index.php?x=' . $x . '&y=' . ($y - 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelRight2 . '</a>';
     } else {
         $rr = $labelRight2;
     }
 
     if (@$level[$yToCheck + 1][$xToCheck] == 'p') {
-        $ll = '<a href="crawl.php?x=' . $x . '&y=' . ($y + 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelLeft2 . '</a>';
+        $ll = '<a href="index.php?x=' . $x . '&y=' . ($y + 1) . '&d=' . $d . '" style="text-decoration: none;">' . $labelLeft2 . '</a>';
     } else {
         $ll = $labelLeft2;
     }
 
     if (@$level[$yToCheck][$xToCheck + 1] == 'p') {
-        $b = '<a href="crawl.php?x=' . ($x + 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelBack . '</a>';
+        $b = '<a href="index.php?x=' . ($x + 1) . '&y=' . $y . '&d=' . $d . '" style="text-decoration: none;">' . $labelBack . '</a>';
     } else {
         $b = $labelBack;
     }
